@@ -1,0 +1,15 @@
+import getpass
+
+# get player input for word to guess and get length of word
+phrase = getpass.getpass("Choose a word to guess: ")
+phrase_len = len(phrase)
+
+hangman = ""
+
+for char in phrase:
+    if char == " ":
+        hangman += "   "
+    else:
+        hangman += "_ "
+
+print(hangman)
